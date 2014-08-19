@@ -2,7 +2,7 @@
   <%= f.inputs do %>
     <%= f.input :name %>
     <%= f.input :gender, :as => :radio, :collection => ["Male", "Female"] %>
-    <%= f.input :emails, :as => :select, :collection => Contact.pluck(:email) %>
+    <%= f.input :emails, :as => :select, :collection => Contact.pluck(:cell) %>
     <%= f.input :subject %>
   <% end %>
 
