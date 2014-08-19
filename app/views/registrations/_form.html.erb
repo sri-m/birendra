@@ -1,0 +1,12 @@
+<%= semantic_form_for @registration do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :gender, :as => :radio, :collection => ["Male", "Female"] %>
+    <%= f.input :emails, :as => :select, :collection => Contact.pluck(:email) %>
+    <%= f.input :subject %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
